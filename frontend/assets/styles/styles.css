@@ -1,3 +1,123 @@
-header  {
-    color: #e3e2e0;
-};
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+h1, h3 {
+    color: #ffffff;
+}
+
+h2 {
+    color : #aa00ff;
+}
+
+p {
+    color: #34495e;
+}
+
+/* Header */
+header {
+    background-color: #aa00ff;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.nom h1 {
+    margin: 0;
+}
+
+.upheader {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ecf0f1;
+}
+
+/* Contact */
+.contact a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Conteneur principal */
+#container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sections */
+#vss, #signaler {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste */
+ul {
+    margin-left: 20px;
+}
+
+/* Bouton SOS */
+.bouton-sos {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bouton-sos:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: #aa00ff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.copyright h3 {
+    margin: 0;
+}
