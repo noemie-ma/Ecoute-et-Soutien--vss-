@@ -16,14 +16,14 @@ h2 {
 }
 
 p {
-    color: #34495e;
+    color: #000000;
 }
 
 /* Header */
 header {
     background-color: #aa00ff;
     color: white;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
