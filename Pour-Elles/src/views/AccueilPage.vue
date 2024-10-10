@@ -34,3 +34,9 @@
         </section>
     </div>
 </template>
+
+<script>
+export default {
+  name: "AccueilPage",
+};
+</script>
