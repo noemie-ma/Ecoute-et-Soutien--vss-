@@ -38,7 +38,7 @@
         vous montre ce qu'il faut fuir.
       </p>
       <img
-        src="./assets/images/violences.png"
+        src="./assets/violences.png"
         alt="Violentomètre avec des informations sur quand fuir un homme lors de comportements violents de sa part."
       />
     </section>

@@ -8,7 +8,10 @@ import ContactPage from "./components/ContactPage.vue";
   <header>
     <!-- Logo et navigation avec des ancres -->
     <div class="logo">
-      <img src="./assets/images/logo.png" alt="Logo du site Pour Elles" />
+      <img src="./assets/logo.png" alt="Logo du site Pour Elles" />
+    </div>
+    <div class="title">
+      <h1>Pour Elles</h1>
     </div>
     <div class="upheader">
       <nav>

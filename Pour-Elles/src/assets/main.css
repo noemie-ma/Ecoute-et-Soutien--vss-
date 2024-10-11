@@ -10,6 +10,7 @@ body {
 /* Titres et paragraphes */
 h1, h3 {
     color: #ffffff;
+    font-family: "Sunshiney", cursive, sans-serif;
 }
 
 h2 {
@@ -98,7 +99,7 @@ ul {
 
 /* Bouton SOS */
 .bouton-sos {
-    background-color: #e74c3c;
+    background-color: #c0392b;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -108,7 +109,7 @@ ul {
 }
 
 .bouton-sos:hover {
-    background-color: #c0392b;
+    background-color: #e74c3c;
 }
 
 /* Footer */
