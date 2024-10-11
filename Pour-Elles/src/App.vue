@@ -19,7 +19,7 @@ import ContactPage from "./components/ContactPage.vue";
       </nav>
       <!-- Lien vers la page récapitulative des contacts utiles -->
       <div class="contact">
-        <a href="contact.html">Signaler un cas</a>
+        <a href="./components/ContactPage.vue">Signaler un cas</a>
       </div>
     </div>
   </header>
