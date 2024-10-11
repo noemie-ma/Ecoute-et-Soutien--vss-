@@ -38,7 +38,7 @@
         vous montre ce qu'il faut fuir.
       </p>
       <img
-        src="./assets/images/violences.webp"
+        src="./assets/images/violences.png"
         alt="Violentomètre avec des informations sur quand fuir un homme lors de comportements violents de sa part."
       />
     </section>
@@ -51,7 +51,7 @@
         Toutes les informations à ce sujet se trouve sur la page "signaler un
         cas".
       </p>
-      <a href="contact.html" target="_blank"
+      <a href="ContactPage.vue" target="_blank"
         ><button class="bouton-sos">Signalez un cas</button></a
       >
     </section>

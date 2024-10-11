@@ -1,4 +1,4 @@
-/* Styles généraux */
+/* Styles généraux (équivalent d'un reset.css) */ 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,12 +7,16 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Titres et paragraphes */
 h1, h3 {
     color: #ffffff;
 }
 
 h2 {
     color : #aa00ff;
+    font-family: "Sunshiney", cursive, sans-serif;
+    font-style: normal;
+    font-size: 25px;
 }
 
 p {
@@ -120,4 +124,47 @@ footer {
 
 .copyright h3 {
     margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        max-width: 80px;
+    }
+
+    nav ul {
+        margin: 5px 0;
+    }
+
+    .bouton-sos {
+        padding: 8px 12px;
+    }
 }
