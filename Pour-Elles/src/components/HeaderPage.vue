@@ -5,9 +5,9 @@
     <div class="logo">
       <img src="./assets/logo.png" alt="Logo du site Pour Elles" />
     </div>
-    <div class="title">
+    <!--<div class="title">
       <h1>Pour Elles</h1>
-    </div>
+    </div>-->
     <div class="upheader">
       <nav>
         <ul>

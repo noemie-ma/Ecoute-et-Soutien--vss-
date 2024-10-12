@@ -5,6 +5,7 @@
     <section id="vss">
       <h2>Les Violences Sexistes et Sexuelles (vss) : qu'est-ce que c'est ?</h2>
       <p>
+        <img src="./assets/gav.jpg" alt="Image de garde à vue" />
         Les violences sexistes et sexuelles regroupent un ensemble d'actes et de
         comportements qui visent à
         <br />
@@ -38,22 +39,9 @@
         vous montre ce qu'il faut fuir.
       </p>
       <img
-        src="./assets/violences.png"
+        src="./assets/violences.webp"
         alt="Violentomètre avec des informations sur quand fuir un homme lors de comportements violents de sa part."
       />
-    </section>
-    <!-- Partie sur comment et où les signaler -->
-    <section id="signaler">
-      <h2>Comment signaler un fait de violence sexiste et sexuelle ?</h2>
-      <p>
-        Un homme vous a fait du mal récemment ? Cette violence rentre-t'elle
-        dans l'échelle ? <br />
-        Toutes les informations à ce sujet se trouve sur la page "signaler un
-        cas".
-      </p>
-      <a href="./ContactPage.vue">
-        <button class="bouton-sos">Signalez un cas</button>
-      </a>
     </section>
   </div>
 </template>
