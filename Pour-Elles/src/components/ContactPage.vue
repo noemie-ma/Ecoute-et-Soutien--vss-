@@ -2,7 +2,7 @@
   <!-- Contenu du site avec les parties en lien avec les ancres -->
   <div id="container">
     <!-- Partie de présentation des formes de VSS -->
-    <section id="vss">
+    <section id="vss2">
       <!-- Section numéro d'urgence -->
       <h2>Qui contacter en cas de danger ?</h2>
       <p>
@@ -14,6 +14,10 @@
           alt="QR Code Tchat Gendarmerie Anonyme"
         />
       </p>
+    </section>
+    <!-- Partie sur les partenariats -->
+    <section id="signaler">
+      <h2>Me contacter</h2>
       <p>
         Si vous avez besoin de me contacter pour quoi que ce soit (pourquoi
         cette initiative ? A qui m'adresser au niveau juridique ?),<br />
@@ -34,15 +38,6 @@
         <!-- your other form fields go here -->
         <button type="submit">Envoyer</button>
       </form>
-    </section>
-    <!-- Partie sur les partenariats -->
-    <section id="signaler">
-      <h2>Me contacter</h2>
-      <p>
-        Si vous avez besoin de me contacter pour quoi que ce soit (pourquoi
-        cette initiative ? A qui m'adresser au niveau juridique ?),<br />
-        vous pouvez remplir ce formulaire.
-      </p>
     </section>
   </div>
 </template>

@@ -51,9 +51,9 @@
         Toutes les informations à ce sujet se trouve sur la page "signaler un
         cas".
       </p>
-      <a href="ContactPage.vue" target="_blank"
-        ><button class="bouton-sos">Signalez un cas</button></a
-      >
+      <a href="./ContactPage.vue">
+        <button class="bouton-sos">Signalez un cas</button>
+      </a>
     </section>
   </div>
 </template>
