@@ -27,11 +27,25 @@ p {
 /* Header */
 header {
     background-color: #aa00ff;
-    color: white;
+    color: #ffffff;
     padding: 10px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
+    font-family: "Sunshiney", cursive, sans-serif;
+    font-size: 20px;
+}
+
+.upheader {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+/* Logo du site */
+.logo {
+    align-content: flex-start;
+    flex: 1;
 }
 
 .logo img {
@@ -42,9 +56,10 @@ header {
     margin: 0;
 }
 
-.upheader {
+nav /* Nav-bar */
+{
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 nav ul {
@@ -59,13 +74,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
     color: #ecf0f1;
+    border-bottom: 3px solid #FFFFFF;
+    padding-bottom: 10px;
+
 }
 
 /* Contact */
@@ -174,17 +192,57 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
-    nav ul {
-        flex-direction: column;
-        margin: 10px 0;
+    .upheader {
+        
+		flex-direction: column;
+		width: 100%;
+	}
+
+    .logo {
+        order: 1;
+    }
+
+    nav {
+        order: 3;
+        flex: 1 0 100%;
+        width: 100%;
+    }
+
+    nav ul
+    {
+        width: 100%;
+        text-align: center;
+        justify-content: space-around;
+        align-items: stretch;
+        border-top: none;
+    }
+
+    nav li {
+        margin-bottom: 17px;
+		margin-top: 2px;
     }
 
     nav ul li {
         margin: 5px 0;
+    }
+
+    nav ul li a:hover {
+        padding-bottom: 20px;
+    }
+
+    .contact {
+            order: 2;
+            align-self: self-end;
+            padding: 0;
+            margin-bottom: 25px;
+            margin-left: 30px;
+            margin-top: -12px;
+            margin-right: 1px;
     }
 
     #container {

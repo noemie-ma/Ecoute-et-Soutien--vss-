@@ -25,14 +25,14 @@
       </p>
       <form action="https://formspree.io/f/xjkvvbay" method="POST">
         <label>
-          Your email:
+          Votre email :
           <input type="email" name="email" placeholder="Votre adresse mail" />
         </label>
         <label>
-          Your message:
+          Votre demande :
           <textarea
             name="message"
-            placeholder="votre nom ou le nom de votre organisation"
+            placeholder="Rédigez votre demande ici"
           ></textarea>
         </label>
         <!-- your other form fields go here -->

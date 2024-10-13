@@ -12,7 +12,7 @@
       <nav>
         <ul>
           <li><a href="#vss" class="linknav">Qu'est-ce que les VSS ?</a></li>
-          <li><a href="#signaler" class="linknav">Que faire ?</a></li>
+          <li><a href="#signaler" class="linknav">Des questions ?</a></li>
         </ul>
       </nav>
       <!-- Lien vers la page récapitulative des contacts utiles -->
