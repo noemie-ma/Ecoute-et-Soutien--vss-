@@ -1,43 +1,41 @@
 <template>
-  <!-- Contenu du site avec les parties en lien avec les ancres -->
-  <div id="container">
-    <!-- Partie de présentation des formes de VSS -->
-    <section id="vss2">
-      <!-- Section numéro d'urgence -->
-      <h2>Qui contacter en cas de danger ?</h2>
-      <p>
-        Un homme vous veut du mal ? Vous a fait du mal ? <br />
-        Vous pouvez flasher le QR Code ci-dessous, ou appeller les numéros
-        d'urgences ci-dessous.
-        <img
-          src="./assets/qrcodevss.png"
-          alt="QR Code Tchat Gendarmerie Anonyme"
-        />
-      </p>
-    </section>
-    <!-- Partie sur les partenariats -->
-    <section id="signaler">
-      <h2>Me contacter</h2>
-      <p>
-        Si vous avez besoin de me contacter pour quoi que ce soit (pourquoi
-        cette initiative ? A qui m'adresser au niveau juridique ?),<br />
-        vous pouvez remplir ce formulaire.
-      </p>
-      <form action="https://formspree.io/f/xjkvvbay" method="POST">
+  <div>
+    <section>
+      <h1>Contactez-nous</h1>
+      <form @submit.prevent="submitForm">
+        <label>
+          Votre nom :
+          <input
+            type="text"
+            name="name"
+            placeholder="Votre nom"
+            v-model="form.name"
+            required
+          />
+        </label>
         <label>
           Votre email :
-          <input type="email" name="email" placeholder="Votre adresse mail" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Votre adresse mail"
+            v-model="form.email"
+            required
+          />
         </label>
         <label>
           Votre demande :
           <textarea
             name="message"
             placeholder="Rédigez votre demande ici"
+            v-model="form.message"
+            required
           ></textarea>
         </label>
-        <!-- your other form fields go here -->
         <button type="submit">Envoyer</button>
       </form>
+      <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
+      <p v-if="successMessage" class="success">{{ successMessage }}</p>
     </section>
   </div>
 </template>
@@ -45,5 +43,75 @@
 <script>
 export default {
   name: "ContactPage",
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
+      errorMessage: "",
+      successMessage: "",
+    };
+  },
+  methods: {
+    validateForm() {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!this.form.name || !this.form.email || !this.form.message) {
+        this.errorMessage = "Tous les champs sont obligatoires.";
+        return false;
+      }
+      if (!emailPattern.test(this.form.email)) {
+        this.errorMessage = "Veuillez entrer une adresse email valide.";
+        return false;
+      }
+      this.errorMessage = "";
+      return true;
+    },
+    sanitizeInput(input) {
+      const temp = document.createElement("div");
+      temp.textContent = input;
+      return temp.innerHTML;
+    },
+    async submitForm() {
+      if (!this.validateForm()) {
+        return;
+      }
+      const sanitizedForm = {
+        name: this.sanitizeInput(this.form.name),
+        email: this.sanitizeInput(this.form.email),
+        message: this.sanitizeInput(this.form.message),
+      };
+      try {
+        const response = await fetch("https://your-api-endpoint.com/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(sanitizedForm),
+        });
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        console.log(data);
+        this.successMessage = "Votre message a été envoyé avec succès.";
+        this.form = { name: "", email: "", message: "" };
+      } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
+        this.errorMessage =
+          "Une erreur est survenue lors de l'envoi du message.";
+      }
+    },
+  },
 };
 </script>
+
+<style scoped>
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+</style>
